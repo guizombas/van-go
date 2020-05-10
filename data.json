@@ -1,0 +1,32 @@
+{
+  "transportes":{
+     "b44b069f":{
+        "carro":"Van Mercedes-Benz",
+        "motorista":"Renato Russo",
+        "telefone":"(31) 3131-0000",
+        "inicio":"07:00",
+        "fim":"12:00",
+        "faculdades":[
+           "puc-praca",
+           "puc-corel"
+        ],
+        "bairros":[
+           "ouro-preto",
+           "sao-luiz"
+        ]
+     }
+  },
+  "faculdades":{
+     "puc-praca":"PUC Minas - Praça da Liberdade",
+     "puc-corel":"PUC Minas - Coração Eucarístico",
+     "puc-barreiro":"PUC Minas - Barreiro"
+  },
+  "bairros":{
+     "ouro-preto":"Ouro Preto",
+     "sao-luiz":"São Luiz",
+     "savassi":"Savassi",
+     "barro-preto":"Barro Preto",
+     "funcionarios":"Funcionários",
+     "buritis":"Buritis"
+  }
+}
