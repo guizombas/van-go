@@ -1,6 +1,8 @@
 const Lockr = window.Lockr;
 const $ = window.$;
 
+let isDatabaseReady = false;
+
 function loadDefaultData() {
   return new Promise((resolve) => {
     $.getJSON("data.json", (json) => {
@@ -23,6 +25,21 @@ async function init() {
 
     Lockr.set('isLoaded', true);
   }
+
+  isDatabaseReady = true;
+}
+
+function whenReady(callback) {
+  const resolveWhenReady = new Promise((resolve) => {
+    const interval = setInterval(function () {
+      if(isDatabaseReady) {
+        clearInterval(interval);
+        resolve();
+      }
+    }, 50);
+  });
+
+  resolveWhenReady.then(callback);
 }
 
 function getListaDeTransportes() {
@@ -44,11 +61,39 @@ function getTransportePorId(id) {
   return transportes[id];
 }
 
-const functionsToExport = {
-  init,
-  getListaDeTransportes,
-  getTransportePorId,
-};
-window.database = functionsToExport;
+function getFaculdades() {
+  const faculdades = Lockr.get('faculdades');
+  const arrayDeFaculdades = [];
 
-export default { ...functionsToExport };
+  Object.keys(faculdades).map(key => {
+    arrayDeFaculdades.push({
+      value: key,
+      label: faculdades[key],
+    });
+  });
+
+  return arrayDeFaculdades;
+}
+
+function getBairros() {
+  const bairros = Lockr.get('bairros');
+  const arrayDeBairros = [];
+
+  Object.keys(bairros).map(key => {
+    arrayDeBairros.push({
+      value: key,
+      label: bairros[key],
+    });
+  });
+
+  return arrayDeBairros;
+}
+
+export default {
+  init,
+  whenReady,
+  getListaDeTransportes,
+  getFaculdades,
+  getBairros,
+  getTransportePorId,
+ };

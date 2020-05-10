@@ -18,8 +18,21 @@
 
 <body>
   <div class="container">
-    <p>Página inicial</p>
+    <p>Página de pesquisa</p>
   </div>
+
+  <script>
+    $(function() {
+      window.database.whenReady(() => {
+
+        // Variáveis com os dados do banco de dados
+        const database = window.database;
+        const faculdades = database.getFaculdades();
+        const bairros = database.getBairros();
+
+      });
+    });
+  </script>
 </body>
 
 </html>

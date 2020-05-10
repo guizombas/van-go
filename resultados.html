@@ -18,8 +18,25 @@
 
 <body>
   <div class="container">
-    <p>Página inicial</p>
+    <p>Página de resultados</p>
   </div>
+
+  <script>
+    $(function() {
+      window.database.whenReady(() => {
+
+        // Variáveis com os dados do banco de dados
+        const database = window.database;
+        const faculdades = database.getFaculdades();
+        const bairros = database.getBairros();
+
+        // Faculdade e Bairro selecionado (considerar, por enquanto, estes valores temporários)
+        const faculdadeSelecionada = "puc-praca";
+        const bairroSelecionado = "sao-luiz";
+
+      });
+    });
+  </script>
 </body>
 
 </html>

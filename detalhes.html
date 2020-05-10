@@ -18,8 +18,25 @@
 
 <body>
   <div class="container">
-    <p>Página inicial</p>
+    <p>Página de detalhes do transporte</p>
   </div>
+
+  <script>
+    $(function() {
+      window.database.whenReady(() => {
+
+        // Variáveis com os dados do banco de dados
+        const database = window.database;
+        const faculdades = database.getFaculdades();
+        const bairros = database.getBairros();
+
+        // ID (código único) no banco de dados do transporte selecionado
+        const idSelecionado = "b44b069f";
+        const transporteSelecionado = database.getTransportePorId(idSelecionado);
+
+      });
+    });
+  </script>
 </body>
 
 </html>

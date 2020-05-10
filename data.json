@@ -6,6 +6,39 @@
         "telefone":"(31) 3131-0000",
         "inicio":"07:00",
         "fim":"12:00",
+        "valor":"R$ 200.00",
+        "faculdades":[
+           "puc-praca",
+           "puc-corel"
+        ],
+        "bairros":[
+           "ouro-preto",
+           "sao-luiz"
+        ]
+     },
+     "c33b069f":{
+        "carro":"Van Mercedes-Benz",
+        "motorista":"Wanessa Camargo",
+        "telefone":"(31) 3131-0000",
+        "inicio":"07:00",
+        "fim":"12:00",
+        "valor":"R$ 200.00",
+        "faculdades":[
+           "puc-praca",
+           "puc-corel"
+        ],
+        "bairros":[
+           "ouro-preto",
+           "sao-luiz"
+        ]
+     },
+     "a11b069f":{
+        "carro":"Van Mercedes-Benz",
+        "motorista":"Gilberto Gil",
+        "telefone":"(31) 3131-0000",
+        "inicio":"07:00",
+        "fim":"12:00",
+        "valor":"R$ 200.00",
         "faculdades":[
            "puc-praca",
            "puc-corel"
