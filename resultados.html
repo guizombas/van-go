@@ -18,38 +18,40 @@
 </head>
 
 <body>
-  
+
   <div class="container-pesquisa">
-    <div class="row">
+    <section class="row pesquisa">
         <div class="col-12 header-pesquisa">
-          <h1>Pesquisando Transporte</h1>
-          <h2>Seu bairro</h2>
-          #bairro
-          <h2>Sua faculdade</h2>
-          #faculdade
+          <h1 id="pesquisando">Pesquisando Transporte</h1>
+          <h2 id="tituloPesquisa">Seu bairro</h2>
+          <p id="bairro-selecionado">bairroSelecionado</p>
+          <h2 id="tituloPesquisa">Sua faculdade</h2>
+          <p id="faculdade-selecionada">faculdadeSelecionada</p>
         </div>
-      </div>
+    </section>
   </div>
 
 
   <main class="container-main">
-    <div class="row">
+    <section class="row result">
+
       <div class="col-12">
           <div class="row">
-              <div class="col-6 result-head">
+              <div class="col-10 result-head">
                   <h1>Resultados</h1>
               </div>
-              <div class="col-6 result-filter">
+              <div class="col-2 result-filter">
                   Filtro
               </div>
           </div>
-          <div class="row">
-              <div class="col-12 result-list">
+          <section class="row result-list">
+              <div class="col-12">
                   Lista de resultados
               </div>
-          </div>
+          </section>
       </div>
-    </div>
+      
+    </section>
   </main>
 
 
@@ -68,6 +70,8 @@
         const faculdadeSelecionada = "puc-praca";
         const bairroSelecionado = "sao-luiz";
 
+        document.getElementById('bairro-selecionado').innerHTML = bairroSelecionado;
+        document.getElementById('faculdade-selecionada').innerHTML = faculdadeSelecionada;
       });
     });
   </script>
