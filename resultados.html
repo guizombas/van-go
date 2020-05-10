@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lockr/0.8.5/lockr.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script type="module" src="./scripts/main.js"></script>
+  <link rel="stylesheet" href="/styles/result.css">
 
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -17,9 +18,42 @@
 </head>
 
 <body>
-  <div class="container">
-    <p>Página de resultados</p>
+  
+  <div class="container-pesquisa">
+    <div class="row">
+        <div class="col-12 header-pesquisa">
+          <h1>Pesquisando Transporte</h1>
+          <h2>Seu bairro</h2>
+          #bairro
+          <h2>Sua faculdade</h2>
+          #faculdade
+        </div>
+      </div>
   </div>
+
+
+  <main class="container-main">
+    <div class="row">
+      <div class="col-12">
+          <div class="row">
+              <div class="col-6 result-head">
+                  <h1>Resultados</h1>
+              </div>
+              <div class="col-6 result-filter">
+                  Filtro
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 result-list">
+                  Lista de resultados
+              </div>
+          </div>
+      </div>
+    </div>
+  </main>
+
+
+
 
   <script>
     $(function() {
