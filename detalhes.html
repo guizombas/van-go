@@ -22,44 +22,41 @@
 </head>
 
 <body>
-  <div class="container">
-    <h2 class=" mb-5">Informações do transporte</h2>
-
-
+  <div class="container pt-4">
+    <a href="#" onclick="history.back();" class="mt-5">&lt; Voltar para Resultados</a>
+    <h2 class="mb-5">Informações do transporte</h2>
 
     <dl class="row">
       <dt class="col-sm-3">
         <h5 >Motorista</h5>
       </dt>
-      <dd class="col-sm-9 mb-3" id="nome-motorista-jquery"> Renato Russo </dd>
+      <dd class="col-sm-9 mb-3" id="nome-motorista-jquery"> Carregando... </dd>
 
       <dt class="col-sm-3">
         <h5>Carro </h5>
       </dt>
-      <dd class="col-sm-9 mb-3" id="tipo-carro-jquery"> Mercedes-Benz </dd>
+      <dd class="col-sm-9 mb-3" id="tipo-carro-jquery"> Carregando... </dd>
 
       <dt class="col-sm-3">
         <h5>Telefone de Contato</h5>
       </dt>
-      <dd class="col-sm-9 mb-3" id="telefone-motorista-jquery"> (31) 3131-0000</dd>
+      <dd class="col-sm-9 mb-3" id="telefone-motorista-jquery"> Carregando... </dd>
 
       <dt class="col-sm-3 ">
         <h5>Horário</h5>
       </dt>
-      <dd class="col-sm-9 mb-3" id="horario-transporte-jquery">07:00 - 12:00</dd>
+      <dd class="col-sm-9 mb-3" id="horario-transporte-jquery"> Carregando...</dd>
 
       <dt class="col-sm-3 ">
         <h5>Valor</h5>
       </dt>
-      <dd class="col-sm-9 mb-3" id="valor-transporte-jquery">R$ 200,00</dd>
+      <dd class="col-sm-9 mb-5" id="valor-transporte-jquery"> Carregando... </dd>
 
       <dt class="col-sm-3 ">
         <h5>Faculdades Atendidas</h5>
       </dt>
       <dd class="col-sm-9 mb-4">
-        <ul>
-          <li> PUC Minas - Praça da Liberdade </li>
-          <li> PUC Minas - Coração Eucarístico</li>
+        <ul id="faculdades-transporte-jquery">
         </ul>
       </dd>
 
@@ -67,12 +64,8 @@
         <h5>Bairros Atendidos</h5>
       </dt>
       <dd class="col-sm-9 mb-4">
-        <ul>
-        <li> Centro </li>
-        <li> Floresta </li>
-        <li> Padre Eustáqio</li>
-        <li> Ouro Preto</li>
-      </ul>
+        <ul id="bairros-transporte-jquery">
+        </ul>
       </dd>
 
     </dl>
@@ -86,17 +79,34 @@
 
         // Variáveis com os dados do banco de dados
         const database = window.database;
-        const faculdades = database.getFaculdades();
-        const bairros = database.getBairros();
 
         // ID (código único) no banco de dados do transporte selecionado
+        const urlParams = new URLSearchParams(window.location.search);
+        const transporteId = urlParams.get('transporte');
         const idSelecionado = "b44b069f";
-        const transporteSelecionado = database.getTransportePorId(idSelecionado);
-         $("#nome-motorista-jquery").text(transporteSelecionado.motorista);
-         $("#tipo-carro-jquery").text(transporteSelecionado.carro);
-         $("telefone-motorista-jquery").text(transporteSelecionado.telefone);
-         $("horario-transporte-jquery").text(transporteSelecionado.horario);
-         $("valor-transporte-jquery").text(transporteSelecionado.valor);
+
+
+        // Imprimir dados do transporte
+        const transporteSelecionado = database.getTransportePorId(transporteId);
+        $("#nome-motorista-jquery").text(transporteSelecionado.motorista);
+        $("#tipo-carro-jquery").text(transporteSelecionado.carro);
+        $("#telefone-motorista-jquery").text(transporteSelecionado.telefone);
+        $("#valor-transporte-jquery").text(transporteSelecionado.valor);
+
+        // Gerar string com horário e imprimir esse texto 
+        const horario = `${transporteSelecionado.inicio} - ${transporteSelecionado.fim}`;
+        $("#horario-transporte-jquery").text(horario);
+
+        // Imprimir listas de bairros e faculdades
+        transporteSelecionado.bairros.forEach(bairroId => {
+          const nomeBairro = database.getNomeDoBairroPeloId(bairroId);
+          $("#bairros-transporte-jquery").append(`<li>${nomeBairro}</li>`);
+        });
+
+        transporteSelecionado.faculdades.forEach(faculdadeId => {
+          const nomeFaculdade = database.getNomeDaFaculdadePeloId(faculdadeId);
+          $("#faculdades-transporte-jquery").append(`<li>${nomeFaculdade}</li>`);
+        });
          
       });
     });

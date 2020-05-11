@@ -5,8 +5,8 @@ const $ = window.$;
 window.database = database;
 
 async function main() {
-  await database.init();
   $("body").prepend(header);
+  await database.init();
 }
 
 $( document ).ready( main );
