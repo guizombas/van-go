@@ -9,11 +9,19 @@
         "valor":"R$ 200.00",
         "faculdades":[
            "puc-praca",
-           "puc-corel"
+           "puc-coreu"
         ],
         "bairros":[
            "ouro-preto",
-           "sao-luiz"
+           "sao-luiz",
+           "sao-luiz",
+           "savassi",
+           "barro-preto",
+           "funcionarios",
+           "centro",
+           "floresta",
+           "padre-eustaquio",
+           "buritis"
         ]
      },
      "c33b069f":{
@@ -25,7 +33,7 @@
         "valor":"R$ 200.00",
         "faculdades":[
            "puc-praca",
-           "puc-corel"
+           "puc-coreu"
         ],
         "bairros":[
            "ouro-preto",
@@ -40,8 +48,7 @@
         "fim":"12:00",
         "valor":"R$ 200.00",
         "faculdades":[
-           "puc-praca",
-           "puc-corel"
+           "puc-coreu"
         ],
         "bairros":[
            "ouro-preto",
@@ -51,7 +58,7 @@
   },
   "faculdades":{
      "puc-praca":"PUC Minas - Praça da Liberdade",
-     "puc-corel":"PUC Minas - Coração Eucarístico",
+     "puc-coreu":"PUC Minas - Coração Eucarístico",
      "puc-barreiro":"PUC Minas - Barreiro"
   },
   "bairros":{
@@ -60,6 +67,9 @@
      "savassi":"Savassi",
      "barro-preto":"Barro Preto",
      "funcionarios":"Funcionários",
+     "centro":"Centro",
+     "floresta":"Floresta",
+     "padre-eustaquio":"Padre Eustáquio",
      "buritis":"Buritis"
   }
 }

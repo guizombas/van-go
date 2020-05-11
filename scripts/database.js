@@ -18,7 +18,7 @@ async function init() {
   const isDatabaseLoadedToStorage = Lockr.get('isLoaded');
   if (!isDatabaseLoadedToStorage) {
     const defaultData = await loadDefaultData();
-    
+
     Object.keys(defaultData).map(key => {
       Lockr.set(key, defaultData[key]);
     });
@@ -75,6 +75,16 @@ function getFaculdades() {
   return arrayDeFaculdades;
 }
 
+function getNomeDaFaculdadePeloId(id) {
+  const faculdades = Lockr.get('faculdades');
+  return faculdades[id];
+}
+
+function getNomeDoBairroPeloId(id) {
+  const bairros = Lockr.get('bairros');
+  return bairros[id];
+}
+
 function getBairros() {
   const bairros = Lockr.get('bairros');
   const arrayDeBairros = [];
@@ -89,6 +99,24 @@ function getBairros() {
   return arrayDeBairros;
 }
 
+function getListaFiltradaDeTransportes({
+  faculdade,
+  bairro,
+}) {
+  try {
+    const transportes = getListaDeTransportes();
+
+    let transportesFiltrados = transportes;
+    transportesFiltrados = transportesFiltrados.filter(t => t.bairros.includes(bairro));
+    transportesFiltrados = transportesFiltrados.filter(t => t.faculdades.includes(faculdade));
+
+    return transportesFiltrados;
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+}
+
 export default {
   init,
   whenReady,
@@ -96,4 +124,7 @@ export default {
   getFaculdades,
   getBairros,
   getTransportePorId,
+  getNomeDaFaculdadePeloId,
+  getNomeDoBairroPeloId,
+  getListaFiltradaDeTransportes,
  };
