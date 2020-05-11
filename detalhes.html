@@ -29,29 +29,29 @@
 
     <dl class="row">
       <dt class="col-sm-3">
-        <h5>Motorista</h5>
+        <h5 >Motorista</h5>
       </dt>
-      <dd class="col-sm-9 mb-3">Renato Russo </dd>
+      <dd class="col-sm-9 mb-3" id="nome-motorista-jquery"> Renato Russo </dd>
 
       <dt class="col-sm-3">
         <h5>Carro </h5>
       </dt>
-      <dd class="col-sm-9 mb-3"> Mercedes-Benz </dd>
+      <dd class="col-sm-9 mb-3" id="tipo-carro-jquery"> Mercedes-Benz </dd>
 
       <dt class="col-sm-3">
         <h5>Telefone de Contato</h5>
       </dt>
-      <dd class="col-sm-9 mb-3"> (31) 3131-0000</dd>
+      <dd class="col-sm-9 mb-3" id="telefone-motorista-jquery"> (31) 3131-0000</dd>
 
       <dt class="col-sm-3 ">
         <h5>Horário</h5>
       </dt>
-      <dd class="col-sm-9 mb-3">07:00 - 12:00</dd>
+      <dd class="col-sm-9 mb-3" id="horario-transporte-jquery">07:00 - 12:00</dd>
 
       <dt class="col-sm-3 ">
         <h5>Valor</h5>
       </dt>
-      <dd class="col-sm-9 mb-3">R$ 200,00</dd>
+      <dd class="col-sm-9 mb-3" id="valor-transporte-jquery">R$ 200,00</dd>
 
       <dt class="col-sm-3 ">
         <h5>Faculdades Atendidas</h5>
@@ -92,7 +92,12 @@
         // ID (código único) no banco de dados do transporte selecionado
         const idSelecionado = "b44b069f";
         const transporteSelecionado = database.getTransportePorId(idSelecionado);
-
+         $("#nome-motorista-jquery").text(transporteSelecionado.motorista);
+         $("#tipo-carro-jquery").text(transporteSelecionado.carro);
+         $("telefone-motorista-jquery").text(transporteSelecionado.telefone);
+         $("horario-transporte-jquery").text(transporteSelecionado.horario);
+         $("valor-transporte-jquery").text(transporteSelecionado.valor);
+         
       });
     });
   </script>
