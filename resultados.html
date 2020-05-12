@@ -20,41 +20,42 @@
 <body>
 
   <div class="container-pesquisa">
-    <section class="row pesquisa">
-        <div class="col-12 header-pesquisa">
-          <h1 id="pesquisando">Pesquisando Transporte</h1>
-          <h2 id="tituloPesquisa">Seu bairro</h2>
-          <p id="bairro-selecionado">bairroSelecionado</p>
-          <h2 id="tituloPesquisa">Sua faculdade</h2>
-          <p id="faculdade-selecionada">faculdadeSelecionada</p>
-        </div>
-    </section>
+    <div class="container">
+      <section class="row pesquisa">
+          <div class="col-12 header-pesquisa">
+            <a href="pesquisar.html">&lt; Voltar para Pesquisa</a>
+            <h1 id="pesquisando" class="mb-4">Resultados da Pesquisa</h1>
+            <h2 id="tituloPesquisa">Seu bairro</h2>
+            <p id="bairro-selecionado"></p>
+            <h2 id="tituloPesquisa">Sua faculdade</h2>
+            <p id="faculdade-selecionada"></p>
+          </div>
+      </section>
+    </div>
   </div>
 
 
   <main class="container-main">
-    <section class="row result">
+    <div class="container">
+      <section class="row result">
 
-      <div class="col-12">
+        <div class="col-12">
           <div class="row">
-              <div class="col-10 result-head">
-                  <h1>Resultados</h1>
-              </div>
-              <div class="col-2 result-filter">
-                  Filtro
-              </div>
+            <div class="col-10 result-head">
+              <h3>Resultados</h1>
+            </div>
+            <div class="col-2 result-filter">
+              <button type="button" class="btn btn-primary">Filtro</button>
+            </div>
           </div>
-          <section class="row result-list">
-              <div class="col-12">
-                  Lista de resultados
-              </div>
+          <section id="resultados-jquery" class="row result-list pt-3">
+            <p>Carregando...</p>
           </section>
-      </div>
-      
-    </section>
+        </div>
+
+      </section>
+    </div>
   </main>
-
-
 
 
   <script>
@@ -63,15 +64,64 @@
 
         // Variáveis com os dados do banco de dados
         const database = window.database;
-        const faculdades = database.getFaculdades();
-        const bairros = database.getBairros();
 
-        // Faculdade e Bairro selecionado (considerar, por enquanto, estes valores temporários)
-        const faculdadeSelecionada = "puc-praca";
-        const bairroSelecionado = "sao-luiz";
+        // Faculdade e Bairro selecionados
+        const urlParams = new URLSearchParams(window.location.search);
+        const faculdadeId = urlParams.get('faculdade');
+        const bairroId = urlParams.get('bairro');
 
-        document.getElementById('bairro-selecionado').innerHTML = bairroSelecionado;
-        document.getElementById('faculdade-selecionada').innerHTML = faculdadeSelecionada;
+        const faculdadeSelecionada = database.getNomeDaFaculdadePeloId(faculdadeId);
+        const bairroSelecionado = database.getNomeDoBairroPeloId(bairroId);
+
+        // Mostrar mensagem de erro se pesquisa estiver incorreta e finalizar código
+        if(!faculdadeId || !bairroId || !faculdadeSelecionada || !bairroSelecionado) {
+          $("#resultados-jquery").html(`
+            <p class="text-danger">Ocorreu um erro interno ao realizar a pesquisa</p>
+          `);
+          return;
+        }
+
+        // Imprimir nomes da faculdade e do bairro
+        $('#bairro-selecionado').text(bairroSelecionado);
+        $('#faculdade-selecionada').text(faculdadeSelecionada);
+
+
+        // Criar cards a partir da busca
+        const transportesEncontrados = database.getListaFiltradaDeTransportes({
+          bairro: bairroId,
+          faculdade: faculdadeId,
+        });
+        const CardItem = (transporte) => `
+          <div class="mb-4 col-xs-12 col-md-6 col-lg-4">
+            <a
+              href="/detalhes.html?transporte=${transporte.id}"
+              class="card text-dark text-center p-3"
+            >
+              <h4 class="mb-0">${transporte.motorista}</h4>
+              <h5 class="text-secondary mb-4">${transporte.carro}</h5>
+              <div class="row">
+                <div class="col-6">
+                  <p>Chegada na Faculdade</p>
+                  <p><b>${transporte.inicio}</b><p>
+                </div>
+                <div class="col-6">
+                  <p>Saída da Faculdade</p>
+                  <p><b>${transporte.fim}</b><p>
+                </div>
+              </div>
+            </a>
+          </div>
+        `;
+        const ArrayDeCards = transportesEncontrados.map(CardItem).join('');
+
+        // Imprimir os cards gerados
+        if(transportesEncontrados.length > 0) {
+          $("#resultados-jquery").html(ArrayDeCards);
+        } else {
+          $("#resultados-jquery").html(`
+            <p class="text-danger">Nenhum resultado foi encontrado para essa pesquisa</p>
+          `);
+        }
       });
     });
   </script>
