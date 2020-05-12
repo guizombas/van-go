@@ -45,7 +45,7 @@
               <h3>Resultados</h1>
             </div>
             <div class="col-2 result-filter">
-              <button type="button" class="btn btn-primary">Filtro</button>
+              <!-- <button type="button" class="btn btn-primary">Filtro</button> -->
             </div>
           </div>
           <section id="resultados-jquery" class="row result-list pt-3">
@@ -95,17 +95,17 @@
           <div class="mb-4 col-xs-12 col-md-6 col-lg-4">
             <a
               href="/detalhes.html?transporte=${transporte.id}"
-              class="card text-dark text-center p-3"
+              class="card card-resultado text-dark text-center p-3"
             >
               <h4 class="mb-0">${transporte.motorista}</h4>
               <h5 class="text-secondary mb-4">${transporte.carro}</h5>
               <div class="row">
                 <div class="col-6">
-                  <p>Chegada na Faculdade</p>
+                  <p>Chegada na<br>Faculdade</p>
                   <p><b>${transporte.inicio}</b><p>
                 </div>
                 <div class="col-6">
-                  <p>Saída da Faculdade</p>
+                  <p>Saída da<br>Faculdade</p>
                   <p><b>${transporte.fim}</b><p>
                 </div>
               </div>
