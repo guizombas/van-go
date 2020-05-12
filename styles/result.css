@@ -1,6 +1,6 @@
 .container-pesquisa{
     background: #F7F7F7;
-    text-align: center;
+    text-align: left;
     padding: 20px;
     margin-bottom: 20px;
     border-top: 1px solid #ccc;
@@ -15,7 +15,7 @@ body{
 
 #tituloPesquisa{
     font-size: 18px;
-    padding: 5px;
+    padding: 5px 5px 0 0;
     text-decoration: overline #FC4D02;
     
 }
