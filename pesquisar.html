@@ -17,8 +17,30 @@
 </head>
 
 <body>
-  <div class="container">
-    <p>Página de pesquisa</p>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h2 class="display-5">Procurar Transportes</h1>
+      <p class="lead">Escolha onde você mora e a sua faculdade para achar motoristas que fazem o seu trajeto.</p>
+
+      <form class="row mt-5" action="/resultados.html">
+        <div class="form-group col-xs-12 col-md-6">
+          <label for="inputBairro">Seu Bairro</label>
+          <select class="form-control" id="inputBairro" name="bairro" required>
+            <option disabled selected value> -- Escolha um Bairro -- </option>
+          </select>
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+          <label for="inputFaculdade">Sua Faculdade</label>
+          <select class="form-control" id="inputFaculdade" name="faculdade" required>
+            <option disabled selected value> -- Escolha uma Faculdade -- </option>
+          </select>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary mt-3 ml-auto px-4">Procurar</button>
+        </div>
+      </form>
+
+    </div>
   </div>
 
   <script>
@@ -29,6 +51,16 @@
         const database = window.database;
         const faculdades = database.getFaculdades();
         const bairros = database.getBairros();
+
+        // Adiconar listas de bairros e faculdades no select
+        bairros.forEach(bairro => {
+          $("#inputBairro").append(`<option value="${bairro.value}">${bairro.label}</option>`);
+        });
+
+        faculdades.forEach(faculdade => {
+          console.log(faculdade)
+          $("#inputFaculdade").append(`<option value="${faculdade.value}">${faculdade.label}</option>`);
+        });
 
       });
     });
