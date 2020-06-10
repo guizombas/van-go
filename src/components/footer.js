@@ -3,12 +3,12 @@ const Footer = `
 
 <div class="row infos">
 
-    <div class="col-6 col-sm6 col-md-3">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-3">
         <h1>Olá,</h1>
-        <p style="color: black;">A Van GO! é um portal online, onde você como estudante universitario, poderá encontrar seu transporte ideal para as suas necessidades. Além disso, você como motorista, pode divulgar seu serviço, de forma simples e rapida, para diversos estudantes localizados em varias universidades!</p> 
+        <p style="color: black; text-align: justify;">A Van GO! é um portal online, onde você como estudante universitario, poderá encontrar seu transporte ideal para as suas necessidades.<br>Além disso, você como motorista, pode divulgar seu serviço, de forma simples e rapida, para diversos estudantes localizados em varias universidades!</p> 
     </div>
 
-    <div class="col-6 col-sm6 col-md-3 quick-links">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-3 quick-links">
         
         <h1>Acesso rápido</h1>
         <ul class="nav flex-column">
@@ -31,19 +31,19 @@ const Footer = `
         
     </div>
 
-    <div class="col-6 col-sm6 col-md-3 redes-sociais">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-3 redes-sociais">
         <div class="follow-us">
             <h1>Midias Sociais</h1>
             
             <section class="rede-social">
                 <div class="rede" id="facebook">
-                    <img class="icone" src="../images/rede/facebook.png">
-                </div>
-                <div class="rede" id="instagram">
-                    <img class="icone" src="../images/rede/instagram.png">
+                    <img class="icone" src="../src/assets/rede/facebook.png">
                 </div>
                 <div class="rede" id="youtube">
-                    <img class="icone" src="../images/rede/youtube.png">
+                    <img class="icone" src="../src/assets/rede/youtube.png">
+                </div>
+                <div class="rede" id="instagram">
+                    <img class="icone" src="../src/assets/rede/instagram.png">
                 </div>
             </section>
 

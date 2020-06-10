@@ -1,5 +1,6 @@
 .footer{
     margin-top: 20px;
+  
 }
 
 .footer h1{
@@ -10,17 +11,18 @@
 
 .rede-social{
     margin:50px auto;
-    width: 1025px;
+    width: 600px;
     height: 150px;
 }
 
 .rede{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     float: left;
     margin-left: 20px;
     transition: all 0.4s ease-out;
     border-radius: 50%;
+    
 }
 
 .rede:hover{
@@ -38,19 +40,36 @@
 }   
 
 .rede#youtube{
-    background-color: #b00;
+    background-color: red;
 }
 
 .icone{
     margin: 0px auto;
     padding: 35px;
-    width: 150px;
-
+    width: 100px;  
 }
 
 .copy{
     font-size: 10px;
     text-align: center;
     color: black;
+}
+
+.quick-links{
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:600px){
+    .redes-sociais{
+        display: none;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:991px){
+    .redes-sociais{
+        display: none;
+    }
 }
 
