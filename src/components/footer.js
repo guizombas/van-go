@@ -37,13 +37,13 @@ const Footer = `
             
             <section class="rede-social">
                 <div class="rede" id="facebook">
-                    <img class="icone" src="../src/assets/rede/facebook.png">
+                    <img class="icone" src="assets/rede/facebook.png">
                 </div>
                 <div class="rede" id="youtube">
-                    <img class="icone" src="../src/assets/rede/youtube.png">
+                    <img class="icone" src="assets/rede/youtube.png">
                 </div>
                 <div class="rede" id="instagram">
-                    <img class="icone" src="../src/assets/rede/instagram.png">
+                    <img class="icone" src="assets/rede/instagram.png">
                 </div>
             </section>
 
