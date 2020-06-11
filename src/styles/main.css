@@ -1,6 +1,7 @@
 .footer{
-    margin-top: 20px;
-  
+    margin-top: 0px;
+    width: 100%;
+
 }
 
 .footer h1{
@@ -13,6 +14,10 @@
     margin:50px auto;
     width: 600px;
     height: 150px;
+}
+
+.infos{
+    width: 100%;
 }
 
 .rede{

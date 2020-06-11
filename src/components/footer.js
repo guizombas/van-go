@@ -1,7 +1,7 @@
 const Footer = `
 <footer class="container footer">
 
-<div class="row infos">
+<nav class="row infos">
 
     <div class="col-6 col-sm-6 col-md-6 col-lg-3">
         <h1>Olá,</h1>
@@ -24,10 +24,13 @@ const Footer = `
             <li class="nav-item">
                 <a class="nav-link" href="#">Sobre nós</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="https://github.com/italohdc/van-go">GitHub</a>
+        </li>
             
         </ul>
 
-        <p class="copy">VanGO! - Todos direitos reservados - 2020</p>
+        <p class="copy" style="word-wrap: break-word;"><br>VanGO! - Todos direitos reservados - 2020</p>
         
     </div>
 
@@ -52,7 +55,7 @@ const Footer = `
         
     </div>
 
-</div>
+</nav>
 
 </footer>
 
