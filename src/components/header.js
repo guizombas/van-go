@@ -2,7 +2,7 @@ const Header = `
   <header class="navbar navbar-light bg-light">
     <nav class="container">
       <a class="navbar-brand" href="/">
-        <img src="assets/logo.png" width="180px" class="d-inline-block align-top" alt="">
+        <img src="assets/logo-1.png" width="180px" class="d-inline-block align-top" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

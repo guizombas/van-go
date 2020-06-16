@@ -22,7 +22,10 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-[ Em construção ]
+Ainda como citado, cada integrante deve realizar o fork do projeto para
+a sua conta do GitHub, desta forma, temos uma organização estruturada da
+contribuição efetiva no código-fonte, tendo a possibilidade também, do
+mapeamento prático do desenvolvimento de forma estável.
 
 ## Hospedagem
 
