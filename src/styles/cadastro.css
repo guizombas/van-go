@@ -1,0 +1,98 @@
+/* container */
+
+#content{ 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+/* content */
+#unic-content{ 
+    border-radius: 15px;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid transparent;
+    width: 960px;
+    height: 100%;
+    
+    
+}
+
+#titleCadastro{
+    color: #549DB4;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+
+}
+
+#description{
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+    line-height: 30px;
+    margin-bottom: 0px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    
+}
+
+.form input{
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+}
+.btnSend{
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    /* border-width: 0px; */
+}
+
+.btnSend:hover{
+    /* border-width: 0px; */
+    border-color: #549DB4;
+    background-color: white;
+    color: #549DB4;
+
+}
+
+.label-input{
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin:5px;
+}
+
+.icon-modify{
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+/* .btn-primary{
+    background-color: #FB5F2E;
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover{
+    background-color: #549DB4;
+    border: 1px solid white;
+    color: black;
+} */
+
+

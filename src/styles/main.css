@@ -1,11 +1,68 @@
-.footer{
-    margin-top: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#middle-page{
+    margin-bottom: 0px;
     width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    margin-top: 10px;
+    width: 100%;
+    margin-left: 70px;
+}
+
+
+
+footer{
+    display: flex;
+}
+
+header{
+    display: flex;
+}
+
+.btnSys{
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-primary{
+    background-color: #FB5F2E;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover{
+    background-color: #549DB4;
+    border: 1px solid white;
+    color: black;
+}
+
+
+#btnTest{
+    float: right;
+    margin-left: 5px;
+    text-transform: uppercase;
 
 }
 
+
 .footer h1{
-    margin-top: 100px;
+    margin-top: 15px;
     margin-bottom: 10%;
     font-size: 140%;
 }
@@ -19,6 +76,7 @@
 .infos{
     width: 100%;
 }
+
 
 .rede{
     width: 100px;
@@ -65,16 +123,29 @@
 }
 
 
-
-@media screen and (max-width:600px){
+@media screen and (max-width:768px){
     .redes-sociais{
         display: none;
     }
+
+    .footer{
+        margin-left: 0px;
+    }
+    
+   
+    
+    
 }
 
-@media screen and (min-width:601px) and (max-width:991px){
+
+
+@media screen and (min-width:769px) and (max-width:991px){
     .redes-sociais{
         display: none;
     }
+    
+    
+ 
+   
 }
 

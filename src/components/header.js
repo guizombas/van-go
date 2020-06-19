@@ -8,11 +8,17 @@ const Header = `
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <button type="button" id="btnTest" class="btnSys btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Cadastro</button>
+      <button type="button" id="btnTest" class="btnSys btn btn-primary btn-sm">Login</button>
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="/">Início</a>
           <a class="nav-item nav-link" href="/pesquisar.html">Procurar Transportes</a>
+          
         </div>
-      </div>
+
+    
+    </div>
+      
     </nav>
   </header>
 `;
