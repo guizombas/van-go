@@ -17,6 +17,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
 
     <script src="https://kit.fontawesome.com/a280530ec5.js" crossorigin="anonymous"></script>
 
@@ -24,39 +26,43 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/cadastro.css">
 
-    <title>Cadastro - Universitário</title>
+    <title>Cadastro - Motorista</title>
 </head>
 
 <body>
-    
-    
+
+
     <div id="content" class="jumbotron jumbotron-fluid">
-        
+
         <div id="unic-content" class="container">
-            <h5 id="titleCadastro">universitário</h5>
-            <p id="description">Olá, seja bem vindo estamos perto de conseguir sua van ideal, mas
-                antes
-                preencha alguns dados:</p>
+            <h5 id="titleCadastro">motoristas</h5>
+            <p id="description">Olá, seja bem vindo estamos perto de captar diversos clientes exclusivos para você,
+                mas antes precisamos que preencha alguns dados:
+            </p>
             <form class="form">
                 <label class="label-input">
                     <i class="fa fa-user-circle-o icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="text" placeholder="Nome">
-                </label>
-                <label class="label-input">
-                    <i class="fa fa-university icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="text" placeholder="Universidade">
+                    <input class="input-data" type="text" placeholder="Nome completo">
                 </label>
                 <label class="label-input">
                     <i class="fa fa-envelope-o icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="email" placeholder="E-mail">
+                    <input class="input-data" type="email" placeholder="E-mail">
                 </label>
                 <label class="label-input">
-                    <i class="fa fa-lock icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="password" placeholder="Senha">
+                    <i class="fas fa-id-card icon-modify"></i>
+                    <input class="input-data" type="text" placeholder="CNH">
                 </label>
-               
-                
-                
+                <label class="label-input">
+                    <i class="fas fa-phone icon-modify"></i>
+                    <input id="contato" type="text" class="input-data" placeholder="Contato">
+                </label>
+
+                <label class="label-input">
+                    <i class="fa fa-lock icon-modify" aria-hidden="true"></i>
+                    <input class="input-data" type="password" placeholder="Senha">
+                </label>
+
+
                 <button class="btnSend btn-primary">Enviar</button>
             </form>
         </div>
@@ -78,13 +84,20 @@
                     Você se enquadra em qual categoria?
                 </div>
                 <div class="modal-footer">
-                    <a href="cadastro-universitario.html"><button type="button" class="btnSys btn btn-primary">Universitário</button></a>
-                    <a href="cadastro-motorista.html"><button type="button" class="btnSys btn btn-secondary">Motorista de van</button></a>
-                  </div>
+                    <a href="cadastro-universitario.html"><button type="button"
+                            class="btnSys btn btn-primary">Universitário</button></a>
+                    <a href="cadastro-motorista.html"><button type="button" class="btnSys btn btn-secondary">Motorista
+                            de van</button></a>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('#contato').mask("(99) 99999-9999");
 
+        });
+    </script>
 </body>
 
 </html>

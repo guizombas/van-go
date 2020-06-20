@@ -21,14 +21,17 @@ body{
 .footer{
     margin-top: 10px;
     width: 100%;
-    margin-left: 70px;
+    position: relative;
 }
 
 
 
 footer{
     display: flex;
+    
+
 }
+
 
 header{
     display: flex;
@@ -44,6 +47,7 @@ header{
     background-color: #FB5F2E;
     border: 1px solid transparent;
     margin-top: 1rem;
+    transition: background-color 0.7s;
 }
 
 .btn-primary:hover{
@@ -52,6 +56,19 @@ header{
     color: black;
 }
 
+.btn-secondary{
+    background-color: #549DB4;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+    transition: background-color 0.5s;
+}
+
+
+.btn-secondary:hover{
+    background-color: #FB5F2E;
+    border: 1px solid white;
+    color: black;
+}
 
 #btnTest{
     float: right;
@@ -69,12 +86,15 @@ header{
 
 .rede-social{
     margin:50px auto;
-    width: 600px;
+    width: 360px;
     height: 150px;
+    position: relative;
+ 
 }
 
 .infos{
     width: 100%;
+    position: relative;
 }
 
 
@@ -102,6 +122,8 @@ header{
     background-color: #3f729b;
 }   
 
+
+
 .rede#youtube{
     background-color: red;
 }
@@ -122,17 +144,30 @@ header{
     text-align: center;
 }
 
-
-@media screen and (max-width:768px){
-    .redes-sociais{
+@media screen and (max-width:374px){
+    .redes{
         display: none;
     }
 
-    .footer{
-        margin-left: 0px;
+
+    #footer-about{
+        text-align: end;
+        color: black;
     }
     
-   
+    
+}
+
+@media screen and (min-width:375px) and (max-width:768px){
+    #titleMidia{
+        text-align: center;
+    }
+
+
+    #footer-about{
+        text-align: end;
+        color: black;
+    }
     
     
 }
@@ -140,12 +175,47 @@ header{
 
 
 @media screen and (min-width:769px) and (max-width:991px){
-    .redes-sociais{
-        display: none;
+    #titleMidia{
+        text-align: center;
+    }
+    #footer-about{
+        text-align: inherit;
+        color: black;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1028px){
+    #footer-about{
+        text-align: inherit;
+        color: black;
+    }
+
+    .rede-social{
+        width: 200px;
+        display: contents;
+        
     }
     
-    
- 
+    .rede#instagram{
+        margin-left: 75px;
+    }
+
+    .rede{
+        margin-bottom: 10px;
+    }
    
+}
+
+@media screen and (min-width:1029px){
+    #footer-about{
+        text-align: inherit;
+        color: black;
+    }
+    .rede{
+        margin-bottom: 10px;
+    }
+    .follow-us{
+        align-items: center;
+    }
 }
 
