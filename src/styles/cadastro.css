@@ -18,11 +18,11 @@
     justify-content: space-around;
     align-items: center;
     border: 5px solid transparent;
-    width: 960px;
-    height: 100%;
+    
     
     
 }
+
 
 #titleCadastro{
     color: #549DB4;
@@ -132,6 +132,11 @@ input:-webkit-autofill
     }
     .form{
         width: 80%;
+    }
+
+    #unic-content{
+        height: 500px;
+        
     }
     
 }
