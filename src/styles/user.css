@@ -18,7 +18,8 @@
     justify-content: space-around;
     align-items: center;
     border: 5px solid transparent;
-    
+    width: 960px;
+    height: 90%;
     
     
 }
@@ -98,6 +99,10 @@ input:-webkit-autofill
 .icon-modify{
     color: #7f8c8d;
     padding: 0 5px;
+}
+
+#forgot{
+    text-align: end;
 }
 
 @media screen and (max-width:374px){
