@@ -1,0 +1,151 @@
+/* container */
+
+#content{ 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+/* content */
+#unic-content{ 
+    border-radius: 15px;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid transparent;
+    width: 960px;
+    height: 90%;
+    
+    
+}
+
+
+#titleCadastro{
+    color: #549DB4;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+
+}
+
+#description{
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 30px;
+    
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+}
+
+.form input{
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+   
+}
+
+input:-webkit-autofill
+{
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+.btnSend{
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    margin-top: 5px;
+}
+
+.btnSend:hover{
+  
+    border-color: #549DB4;
+    background-color: white;
+    color: #549DB4;
+
+}
+
+.label-input{
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+
+.input-data{
+    border-radius: 10px;
+}
+
+.icon-modify{
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+#forgot{
+    text-align: end;
+}
+
+@media screen and (max-width:374px){
+    .label-input
+    {
+        margin:4px;
+        
+    }
+    .form{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width:375px) and (max-width:991px){
+    .label-input
+    {
+        margin:5px;
+        
+    }
+    .form{
+        width: 90%;
+    }
+    
+}
+
+@media screen and (min-width:992px){
+    .label-input
+    {
+        margin:6px;
+        
+    }
+    .form{
+        width: 80%;
+    }
+
+    #unic-content{
+        height: 500px;
+        
+    }
+    
+}
+
+
+
+

@@ -1,14 +1,11 @@
 const Footer = `
 <footer class="container footer">
-
 <nav class="row infos">
-
-    <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
         <h1>Olá,</h1>
-        <p style="color: black; text-align: justify;">A Van GO! é um portal online, onde você como estudante universitario, poderá encontrar seu transporte ideal para as suas necessidades.<br>Além disso, você como motorista, pode divulgar seu serviço, de forma simples e rapida, para diversos estudantes localizados em varias universidades!</p> 
+        <p id="footer-about">A Van GO! é um portal online, onde você como estudante universitario, poderá encontrar seu transporte ideal para as suas necessidades. Além disso, você como motorista, pode divulgar seu serviço, de forma simples e rapida, para diversos estudantes localizados em varias universidades!</p> 
     </div>
-
-    <div class="col-6 col-sm-6 col-md-6 col-lg-3 quick-links">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-4 quick-links">
         
         <h1>Acesso rápido</h1>
         <ul class="nav flex-column">
@@ -29,16 +26,14 @@ const Footer = `
         </li>
             
         </ul>
-
         <p class="copy" style="word-wrap: break-word;"><br>VanGO! - Todos direitos reservados - 2020</p>
         
     </div>
-
-    <div class="col-6 col-sm-6 col-md-6 col-lg-3 redes-sociais">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 redes">
         <div class="follow-us">
-            <h1>Midias Sociais</h1>
+            <h1 id="titleMidia">Midias Sociais</h1>
             
-            <section class="rede-social">
+            <section id="social" class="rede-social">
                 <div class="rede" id="facebook">
                     <img class="icone" src="assets/rede/facebook.png">
                 </div>
@@ -48,17 +43,14 @@ const Footer = `
                 <div class="rede" id="instagram">
                     <img class="icone" src="assets/rede/instagram.png">
                 </div>
+ 
             </section>
-
         </div>
         
         
     </div>
-
 </nav>
-
 </footer>
-
 `
 
 export default Footer;
