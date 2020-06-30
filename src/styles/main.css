@@ -111,6 +111,13 @@ header{
 
 }
 
+.cad-log{
+    margin-left: 500px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    
+}
+
 
 .footer h1{
     margin-top: 15px;
@@ -192,6 +199,9 @@ header{
         display: none;
     }
 
+    .cad-log{
+        display: none;
+    }
 
     #footer-about{
         text-align: end;
@@ -206,7 +216,9 @@ header{
         text-align: center;
     }
 
-
+    .cad-log{
+        display: none;
+    }
     #footer-about{
         text-align: end;
         color: black;
@@ -225,12 +237,19 @@ header{
         text-align: inherit;
         color: black;
     }
+    .cad-log{
+        display: none;
+    }
 }
 
 @media screen and (min-width:992px) and (max-width:1028px){
     #footer-about{
         text-align: inherit;
         color: black;
+    }
+    
+    .collapse button{
+        display: none;
     }
 
     .rede-social{
@@ -254,6 +273,10 @@ header{
         text-align: inherit;
         color: black;
     }
+    .menu1 button{
+        display: none;
+    }
+    
     .rede{
         margin-bottom: 10px;
     }
