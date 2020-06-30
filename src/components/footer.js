@@ -1,5 +1,6 @@
 const Footer = `
 <footer class="container footer">
+
 <nav class="row infos">
     <div class="col-6 col-sm-6 col-md-6 col-lg-4">
         <h1>Olá,</h1>
