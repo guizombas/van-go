@@ -53,4 +53,11 @@ A pasta [`src`](/src/), é usada para armazenar o codigo fonte da plataforma, se
 
 # Orientações Gerais Sobre o Projeto
 
+A equipe do projeto é composta por: 
+- Érika Marcia
+- Guilherme Gabriel
+- Guilherme Julio
+- Italo Lelis 
+- Izabella Gonçalves
+
 O projeto encontra-se em fase de desenvolvimento, desta forma, novos recursos serão implementados a cada Sprint, a equipe **Van GO!** está aberta a _feedbacks_, obrigado!
