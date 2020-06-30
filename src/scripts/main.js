@@ -11,4 +11,10 @@ async function main() {
   $("body").append(footer);
 }
 
+
+
+
+//avaliação
+
+
 $( document ).ready( main );

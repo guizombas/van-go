@@ -43,6 +43,40 @@ header{
     margin-top: 1rem;
 }
 
+.btnControl-fechar{
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+    transition: background-color 0.7s;
+}
+
+.btnControl-fechar:hover{
+    background-color: #ed0e20;
+    border: 1px solid white;
+    color: white;
+}
+
+.btnControl{
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+    transition: background-color 0.7s;
+    color: white;
+}
+
+.btnControl:hover{
+    background-color: #12c939;
+    border: 1px solid white;
+    color: white;
+}
+
+.ratingstars{
+    margin-top: 10px;
+}
 .btn-primary{
     background-color: #FB5F2E;
     border: 1px solid transparent;
@@ -140,6 +174,15 @@ header{
     color: black;
 }
 
+/* avaliação */
+.animated {
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
+
+
+ 
 .quick-links{
     text-align: center;
 }
