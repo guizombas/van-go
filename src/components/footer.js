@@ -36,7 +36,7 @@ const Footer = `
             
             <section id="social" class="rede-social">
                 <div class="rede" id="facebook">
-                    <img class="icone" src="assets/rede/facebook.png">
+                    <a href="https://www.facebook.com/g0van/"><img class="icone" src="assets/rede/facebook.png"></a>
                 </div>
                 <div class="rede" id="youtube">
                     <img class="icone" src="assets/rede/youtube.png">
