@@ -43,6 +43,40 @@ header{
     margin-top: 1rem;
 }
 
+.btnControl-fechar{
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+    transition: background-color 0.7s;
+}
+
+.btnControl-fechar:hover{
+    background-color: #ed0e20;
+    border: 1px solid white;
+    color: white;
+}
+
+.btnControl{
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+    transition: background-color 0.7s;
+    color: white;
+}
+
+.btnControl:hover{
+    background-color: #12c939;
+    border: 1px solid white;
+    color: white;
+}
+
+.ratingstars{
+    margin-top: 10px;
+}
 .btn-primary{
     background-color: #FB5F2E;
     border: 1px solid transparent;
@@ -75,6 +109,13 @@ header{
     margin-left: 5px;
     text-transform: uppercase;
 
+}
+
+.cad-log{
+    margin-left: 500px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    
 }
 
 
@@ -140,6 +181,15 @@ header{
     color: black;
 }
 
+/* avaliação */
+.animated {
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
+
+
+ 
 .quick-links{
     text-align: center;
 }
@@ -149,6 +199,9 @@ header{
         display: none;
     }
 
+    .cad-log{
+        display: none;
+    }
 
     #footer-about{
         text-align: end;
@@ -163,7 +216,9 @@ header{
         text-align: center;
     }
 
-
+    .cad-log{
+        display: none;
+    }
     #footer-about{
         text-align: end;
         color: black;
@@ -182,12 +237,19 @@ header{
         text-align: inherit;
         color: black;
     }
+    .cad-log{
+        display: none;
+    }
 }
 
 @media screen and (min-width:992px) and (max-width:1028px){
     #footer-about{
         text-align: inherit;
         color: black;
+    }
+    
+    .collapse button{
+        display: none;
     }
 
     .rede-social{
@@ -211,6 +273,10 @@ header{
         text-align: inherit;
         color: black;
     }
+    .menu1 button{
+        display: none;
+    }
+    
     .rede{
         margin-bottom: 10px;
     }

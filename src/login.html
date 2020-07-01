@@ -28,26 +28,26 @@
 </head>
 
 <body>
-    
-    
+
+
     <div id="content" class="jumbotron jumbotron-fluid">
-        
+
         <div id="unic-content" class="container">
             <h5 id="titleCadastro">login</h5>
             <p id="description">Faça login na sua conta para continuar</p>
             <form class="form">
-                
+
                 <label class="label-input">
                     <i class="fa fa-envelope-o icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="email" placeholder="E-mail">
+                    <input class="input-data" type="email" placeholder="E-mail">
                 </label>
                 <label class="label-input">
                     <i class="fa fa-lock icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="password" placeholder="Senha">
+                    <input class="input-data" type="password" placeholder="Senha">
                 </label>
                 <a id="forgot" href="#">Esqueci a senha</a>
-                
-                
+
+
                 <button class="btnSend btn-primary">Entrar</button>
             </form>
         </div>
@@ -69,11 +69,35 @@
                     Você se enquadra em qual categoria?
                 </div>
                 <div class="modal-footer">
-                    <a href="cadastro-universitario.html"><button type="button" class="btnSys btn btn-primary">Universitário</button></a>
-                    <a href="cadastro-motorista.html"><button type="button" class="btnSys btn btn-secondary">Motorista de van</button></a>
-                  </div>
+                    <a href="cadastro-universitario.html"><button type="button"
+                            class="btnSys btn btn-primary">Universitário</button></a>
+                    <a href="cadastro-motorista.html"><button type="button" class="btnSys btn btn-secondary">Motorista
+                            de van</button></a>
+                </div>
             </div>
         </div>
+    </div>
+    <!-- Chat Messenger -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v7.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/pt_BR/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="106056657837060" theme_color="#FB5F2E"
+        logged_in_greeting="Olá, como posso ajudar?" logged_out_greeting="Olá, como posso ajudar?">
     </div>
 
 </body>

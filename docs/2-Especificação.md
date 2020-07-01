@@ -34,6 +34,8 @@ Como parte da metodologia, levantadas 4 histórias de usuário, essas histórias
 |Motorista de van       | Quero um meio de divulgação do meu serviço.                | Para que eu possa fechar contratos de transporte com estudantes |
 |Estudante universitário       | Quero avaliar o serviço oferecido pela minha van universitária               | Para que eu possa ajudar outros estudantes que estão procurando uma van, com informações relevantes. |
 |Estudante universitário      | Quero encontrar informações específicas de cada van universitária, quero o contato telefônico do motorista, e ainda quero ver fotos de cada van universitária.                | Para que eu possa saber todos os detalhes do serviço |
+|Motorista Universitario      | especificar a quantidade de lugares disponíveis.                | evitar contato desnecessário caso a van já esteja com todos lugares ocupados.. |
+|Motorista Universitario      | Divulgar quantas vagas serão disponibilizadas ao final do semestre  | conseguir preenchê-las até o início do semestre |
 
 
 > A primeira história representa um caso principal do projeto, pois baseado na especificação, encontrar uma van 
@@ -67,7 +69,10 @@ O levantamento de requisitos funcionais e não funcionais, foi feito de acordo c
 |RF-004| Permitir que seja feita avaliação e feedback (pontuação/score 0 a 5 estrelas, comentário) do serviço prestado do motorista, a avaliação é feita por quem já usa/usou o serviço de determinada van ou companhia de van; | MÉDIA |
 |RF-005| Portal de submissão de perfil de motorista/van universitária, onde cada motorista pode divulgar seu serviço | ALTA |
 |RF-006| Sistema de criação de conta, tanto do motorista quanto do universitário. | ALTA |
-
+|RF-007| Sistema de criação de conta do motorista, informando dados de CNH, antecedentes criminais, modelo do carro, etc | ALTA |
+|RF-008| Controle de disponibilidade de vagas  | ALTA |
+|RF-009| Alteração de cadastro com inclusão ou exclusão de informações  | Média |
+|RF-010| Lista de espera de vagas em cada veículo  | Média |
 
 ### Requisitos não Funcionais
 
