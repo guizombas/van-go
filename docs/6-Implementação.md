@@ -20,7 +20,7 @@ desenvolvido com as seguintes tecnologias:
 
 A figura abaixo, representa a arquitetura da solução, do projeto **Van GO!**
 
-![Figura 7](images/figura-7.png)
+![Figura 7](images/figura-7.PNG)
 
 De acordo com a definição do projeto, a plataforma é desenvolvida com
 HTML + CSS e JavaScript, com a biblioteca do jQuery fazendo interação com
@@ -50,7 +50,7 @@ jQuery interage com HTML — além do próprio CSS —, e o Bootstrap interage
 diretamente com o HTML, através de elementos criados. A figura abaixo
 mostra a interação entre essas tecnologias:
 
-![Figura 8](images/figura-8.png)
+![Figura 8](images/figura-8.PNG)
 
 O relacionamento mostra como todas essas tecnologias estão ligadas, na
 criação de um portal web responsivo.
