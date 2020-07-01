@@ -17,9 +17,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
+    <script src="/src/scripts/cadastro-universitario.js"></script>
     <script src="https://kit.fontawesome.com/a280530ec5.js" crossorigin="anonymous"></script>
-
+    <script src="/src/scripts/sweetalert2.js"></script>
     <link rel="stylesheet" href="styles/inicial.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/user.css">
@@ -32,27 +32,27 @@
     
     <div id="content" class="jumbotron jumbotron-fluid">
         
-        <div id="unic-content" class="container">
+        <div id="unic-content" class="container" >
             <h5 id="titleCadastro">universitário</h5>
             <p id="description">Olá, seja bem vindo estamos perto de conseguir sua van ideal, mas
                 antes
                 preencha alguns dados:</p>
-            <form class="form">
+            <form class="form" onsubmit="salvar(event)">
                 <label class="label-input">
                     <i class="fa fa-user-circle-o icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="text" placeholder="Nome">
+                    <input class="input-data" type="text" placeholder="Nome" id="nome" required>
                 </label>
                 <label class="label-input">
                     <i class="fa fa-university icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="text" placeholder="Universidade">
+                    <input class="input-data" type="text" placeholder="Universidade" id="universidade" required>
                 </label>
                 <label class="label-input">
                     <i class="fa fa-envelope-o icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="email" placeholder="E-mail">
+                    <input class="input-data" type="email" placeholder="E-mail" id="email" required>
                 </label>
                 <label class="label-input">
                     <i class="fa fa-lock icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="password" placeholder="Senha">
+                    <input class="input-data" type="password" placeholder="Senha" id="senha" required>
                 </label>
                
                 

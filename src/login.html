@@ -17,7 +17,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
+    <script src="/src/scripts/login.js"></script>
+    <script src="/src/scripts/sweetalert2.js"></script>
     <script src="https://kit.fontawesome.com/a280530ec5.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles/inicial.css">
@@ -35,24 +36,24 @@
         <div id="unic-content" class="container">
             <h5 id="titleCadastro">login</h5>
             <p id="description">Faça login na sua conta para continuar</p>
-            <form class="form">
+            <form class="form" onsubmit="login(event)">
                 
                 <label class="label-input">
                     <i class="fa fa-envelope-o icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="email" placeholder="E-mail">
+                    <input class="input-data" type="email" placeholder="E-mail" id="username" required>
                 </label>
                 <label class="label-input">
                     <i class="fa fa-lock icon-modify" aria-hidden="true"></i>
-                    <input class="input-data"type="password" placeholder="Senha">
+                    <input class="input-data" type="password" placeholder="Senha" id="senha" required>
                 </label>
-                <a id="forgot" href="#">Esqueci a senha</a>
+                <a id="forgot" href="#" onclick="redefinirSenha(event)">Esqueci a senha</a>
                 
                 
                 <button class="btnSend btn-primary">Entrar</button>
             </form>
         </div>
     </div>
-
+    
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"

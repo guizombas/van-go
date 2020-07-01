@@ -19,9 +19,11 @@
         crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 
-
+    <script src="/src/scripts/cadastro-motorista.js"></script>
     <script src="https://kit.fontawesome.com/a280530ec5.js" crossorigin="anonymous"></script>
-
+    
+    <script src="/src/scripts/sweetalert2.js"></script>
+   
     <link rel="stylesheet" href="styles/inicial.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/user.css">
@@ -39,36 +41,34 @@
             <p id="description">Olá, seja bem vindo estamos perto de captar diversos clientes exclusivos para você,
                 mas antes precisamos que preencha alguns dados:
             </p>
-            <form class="form">
+            <form class="form" onsubmit="salvar(event)">
                 <label class="label-input">
                     <i class="fa fa-user-circle-o icon-modify" aria-hidden="true"></i>
-                    <input class="input-data" type="text" placeholder="Nome completo">
+                    <input  id="nome" class="input-data" type="text" placeholder="Nome completo" required>
                 </label>
                 <label class="label-input">
                     <i class="fa fa-envelope-o icon-modify" aria-hidden="true"></i>
-                    <input class="input-data" type="email" placeholder="E-mail">
+                    <input  id="email" class="input-data" type="email" placeholder="E-mail" required>
                 </label>
                 <label class="label-input">
                     <i class="fas fa-id-card icon-modify"></i>
-                    <input class="input-data" type="text" placeholder="CNH">
+                    <input  id="cnh" class="input-data" type="text" placeholder="CNH">
                 </label>
                 <label class="label-input">
                     <i class="fas fa-phone icon-modify"></i>
-                    <input id="contato" type="text" class="input-data" placeholder="Contato">
+                    <input id="contato" type="text" class="input-data" placeholder="Contato" required>
                 </label>
 
                 <label class="label-input">
                     <i class="fa fa-lock icon-modify" aria-hidden="true"></i>
-                    <input class="input-data" type="password" placeholder="Senha">
+                    <input  id="senha" class="input-data" type="password" placeholder="Senha" required>
                 </label>
-
-
-                <button class="btnSend btn-primary">Enviar</button>
+                <button class="btnSend btn-primary"  >Enviar</button>
             </form>
         </div>
     </div>
-
-
+    <!-- Mensagem -->
+    
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
