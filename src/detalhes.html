@@ -69,6 +69,14 @@
         </ul>
       </dd>
 
+      <dt class="col-sm-3">
+        <h5>Vagas</h5>
+      </dt>
+      <dd class="col-sm-9 mb-5">
+        <ul id="vagas-jquery"></ul>
+      </dd>
+
+
     </dl>
     </dd>
     </dl>
@@ -129,6 +137,8 @@
           const nomeFaculdade = database.getNomeDaFaculdadePeloId(faculdadeId);
           $("#faculdades-transporte-jquery").append(`<li>${nomeFaculdade}</li>`);
         });
+
+        $("#vagas-jquery").append(`<li>Ida: ${transporteSelecionado.vagas.ida}</li><li>Volta: ${transporteSelecionado.vagas.volta}</li>`)
 
       });
     });

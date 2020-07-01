@@ -21,7 +21,11 @@
            "centro",
            "floresta",
            "padre-eustaquio"
-        ]
+        ],
+        "vagas":{
+           "ida": "2",
+           "volta":"0"
+        }
      },
      "4a6a2597":{
         "carro":"Ford Transit",
@@ -44,7 +48,11 @@
            "floresta",
            "padre-eustaquio",
            "buritis"
-        ]
+        ],
+        "vagas":{
+           "ida": "1",
+           "volta":"3"
+        }
      },
      "1c126733":{
         "carro":"Fiat Ducato Minibus",
@@ -67,7 +75,11 @@
            "floresta",
            "padre-eustaquio",
            "buritis"
-        ]
+        ],
+        "vagas":{
+           "ida": "4",
+           "volta":"4"
+        }
      },
      "c33b069f":{
         "carro":"Mercedes-Benz 413 Van",
@@ -83,7 +95,11 @@
         "bairros":[
            "ouro-preto",
            "sao-luiz"
-        ]
+        ],
+        "vagas":{
+           "ida": "4",
+           "volta":"1"
+        }
      },
      "a11b069f":{
         "carro":"Peugeot Boxer",
@@ -98,7 +114,11 @@
         "bairros":[
            "ouro-preto",
            "sao-luiz"
-        ]
+        ],
+        "vagas":{
+           "ida": "2",
+           "volta":"5"
+        }
      }
   },
   "faculdades":{
