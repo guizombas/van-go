@@ -91,7 +91,10 @@ input:-webkit-autofill
     border-radius: 10px;
     
 }
-
+#btn-salvar{
+    text-decoration: none;
+    color: #ecf0f1;
+}
 .input-data{
     border-radius: 10px;
 }
