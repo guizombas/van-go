@@ -13,7 +13,6 @@ function loadDefaultData() {
 
 async function init() {
   Lockr.prefix = "lockr_";
-  Lockr.set('isLoaded', false);
 
   const isDatabaseLoadedToStorage = Lockr.get('isLoaded');
   if (!isDatabaseLoadedToStorage) {
@@ -117,6 +116,13 @@ function getListaFiltradaDeTransportes({
   }
 }
 
+function saveVagas (id, ida, volta){
+  const transportes = Lockr.get('transportes');
+  transportes[id].vagas.ida = ida;
+  transportes[id].vagas.volta = volta;
+  Lockr.set('transportes',transportes);
+}
+
 export default {
   init,
   whenReady,
@@ -127,4 +133,5 @@ export default {
   getNomeDaFaculdadePeloId,
   getNomeDoBairroPeloId,
   getListaFiltradaDeTransportes,
+  saveVagas
  };

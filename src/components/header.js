@@ -18,7 +18,7 @@ const Header = `
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="/">Início</a>
           <a class="nav-item nav-link" href="/pesquisar.html">Procurar Transportes</a>
-          
+          <a class="nav-item nav-link" href="/controle-de-vagas.html">Controle de Vagas</a>
         </div>
 
     
