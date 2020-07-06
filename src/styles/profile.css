@@ -1,0 +1,28 @@
+/* checkbox personalizado */
+.checkbox {
+    display: none;
+  }
+  .checkbox + label:before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 3px;
+    margin-right: 5px;
+    border: 2px solid gray;
+    margin-bottom: -2px;
+  }
+  .checkbox:checked + label {
+    color: gray;
+  }
+  .checkbox:checked + label:before {
+    background: gray;
+  }
+
+  #ida{
+    margin-bottom: 10px;
+  }
+
+ .container-body{
+   display: contents;
+ }
