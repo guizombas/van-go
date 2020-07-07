@@ -12,6 +12,9 @@ function login(event) {
             var tbmotoristasJSON = JSON.parse(tbmotoristas[i]);
             if (username === tbmotoristasJSON.email && senha === tbmotoristasJSON.senha) {
                 verifica = true;
+                tbmotoristasJSON.status = true;
+                tbmotoristasJSON.tipo = "motorista";
+                sessionStorage.setItem("logged", JSON.stringify(tbmotoristasJSON));
                 Swal.fire('Perfil em construção')
             }
         }
@@ -21,9 +24,11 @@ function login(event) {
             var tbuniversitariosJSON = JSON.parse(tbuniversitarios[i]);
             if (username === tbuniversitariosJSON.email && senha === tbuniversitariosJSON.senha) {
                 verifica = true;
+                tbuniversitariosJSON.status = true;
+                tbuniversitariosJSON.tipo = "universitario";
+                sessionStorage.setItem("logged", JSON.stringify(tbuniversitariosJSON));
                 Swal.fire('Perfil em construção')
             }
-
         }
 
     }
