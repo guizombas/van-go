@@ -15,7 +15,7 @@ function login(event) {
                 tbmotoristasJSON.status = true;
                 tbmotoristasJSON.tipo = "motorista";
                 sessionStorage.setItem("logged", JSON.stringify(tbmotoristasJSON));
-                Swal.fire('Perfil em construção')
+                location.href = "perfil-motorista.html"
             }
         }
     }
@@ -27,7 +27,7 @@ function login(event) {
                 tbuniversitariosJSON.status = true;
                 tbuniversitariosJSON.tipo = "universitario";
                 sessionStorage.setItem("logged", JSON.stringify(tbuniversitariosJSON));
-                Swal.fire('Perfil em construção')
+                location.href = "perfil-universitario.html"
             }
         }
 
